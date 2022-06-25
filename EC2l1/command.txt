@@ -1,0 +1,31 @@
+Install AWS materials
+You can simply do a google search "how to install awscli to the OS you are using".
+
+Debian like systems
+
+sudo apt-get install python2-pip
+sudo apt-get install python3-pip
+sudo pip install awscli
+sudo pip3 install awscli
+RedHat like systems
+
+sudo yum install python2-pip
+sudo yum install python2-pip
+sudo pip install awscli
+sudo pip3 install awscli
+MacOS
+
+# https://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html
+curl -O https://bootstrap.pypa.io/get-pip.py
+python3 get-pip.py --user
+pip3 install awscli --upgrade --user
+aws --version
+AWS CLI 1.11.84 (Python 3.6.1)
+Windows
+
+Please check this web page:
+
+https://docs.aws.amazon.com/cli/latest/userguide/awscli-install-windows.html
+
+
+
