@@ -1,0 +1,17 @@
+Convert terraform v11 code procuded by kops to terraform v12
+Convert terraform v11 code procuded by kops to terraform v12 by "terraform 0.12upgrade" command
+
+
+
+cd /tmp/terraform_code
+terraform init 
+# Archlinux installed terraform in v12 
+# and still kops is producing code in terraform v11
+terraform plan
+...errors ...
+ 
+# terraform v11 code can be converted to terrafrom v12 
+terraform 0.12upgrade
+terraform plan
+terraform apply    
+-Jan

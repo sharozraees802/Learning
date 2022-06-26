@@ -1,0 +1,26 @@
+Start Kubernetes cluster - kops command
+Start up Kubernetes cluster by using kops command
+
+Please keep in mind that flags:
+
+--name=kops.devopsinuse.com
+
+--state=s3://kops.devopsinuse.com
+
+--dns-zone=kops.devopsinuse.com
+
+has to be adjusted to your domain name you are going to buy or get for free.
+
+kops create cluster \
+  --name=kops.devopsinuse.com \
+  --state=s3://kops.devopsinuse.com \
+  --authorization RBAC \
+  --zones=eu-central-1a \
+  --node-count=2 \
+  --node-size=t2.micro \
+  --master-size=t2.micro \
+  --master-count=1 \
+  --dns-zone=kops.devopsinuse.com \
+  --out=devopsinuse_terraform \
+  --target=terraform \
+  --ssh-public-key=~/.ssh/<user_name>.pub
