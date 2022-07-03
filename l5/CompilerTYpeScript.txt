@@ -1,0 +1,56 @@
+Single file compile command
+
+tsc app.ts
+
+
+auto compile command
+
+tsc app.ts -w or tsc app.ts --watch
+
+
+
+multipe file or same project work on a typescript use
+
+first init type typescript compiler
+
+tsc --init
+
+and second command
+
+tsc -w
+
+
+
+tsconfig.json info
+
+
+
+
+if we exclude same file there
+
+use a
+"exclude":[
+	"**/*.dev.ts"   // all folder check .dev.ts exsist sothis file not be compile
+	"node_modules" // all folder or third party not be compile
+
+]
+
+if we add some file to compile add on a tsconfig.jason
+
+"include":[
+	"*.ts"
+]
+or
+"file":[
+"*.ts"
+"app.ts"
+
+]
+
+
+
+and other key target in compilerOption
+
+target we use to change a jvascript version if we want their code .js in es5 or es6 to mention a version on target key value
+
+target:"es6"
